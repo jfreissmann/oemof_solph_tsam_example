@@ -1,0 +1,6 @@
+oemof.solph
+tsam
+ipykernel
+matplotlib
+pandas
+numpy
