@@ -7,12 +7,14 @@ import tsam.timeseriesaggregation as tsam
 from oemof import solph
 
 
-def preprocessing(noTypicalPeriods, hoursPerPeriod, data):
+def preprocessing(noTypicalPeriods, hoursPerPeriod, data,
+                  clusterMethod='k_means', **kwargs):
     aggregation = tsam.TimeSeriesAggregation(
         data,
         noTypicalPeriods=noTypicalPeriods,
         hoursPerPeriod=hoursPerPeriod,
-        clusterMethod='k_means'
+        clusterMethod='k_means',
+        **kwargs
     )
 
     agg_data = aggregation.createTypicalPeriods()
