@@ -13,7 +13,7 @@ def preprocessing(noTypicalPeriods, hoursPerPeriod, data,
         data,
         noTypicalPeriods=noTypicalPeriods,
         hoursPerPeriod=hoursPerPeriod,
-        clusterMethod='k_means',
+        clusterMethod=clusterMethod,
         **kwargs
     )
 
